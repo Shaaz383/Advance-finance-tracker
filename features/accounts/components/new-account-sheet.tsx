@@ -1,4 +1,4 @@
-import { insertAccountsSchema } from "@/db/schema";
+import { insertAccountSchema } from "@/db/schema";
 import { z } from "zod";
 
 import {
@@ -13,7 +13,7 @@ import { AccountForm } from "./account-form";
 
 import { useCreateAccount } from "@/features/accounts/api/use-create-account";
 
-const formSchema = insertAccountsSchema.pick({
+const formSchema = insertAccountSchema.pick({
   name: true,
 });
 
