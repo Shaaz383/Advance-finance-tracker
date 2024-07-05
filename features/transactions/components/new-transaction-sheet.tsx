@@ -31,7 +31,7 @@ type FormValues = z.input<typeof formSchema>;
 export const NewTransactionSheet = () => {
   const { isOpen, onClose } = useNewTransaction();
 
-  const createMutation = useCreateTransaction();
+  const mutation = useCreateTransaction();
 
   const categoryQuery = useGetCategories();
   const categoryMutation = useCreateCategory();
@@ -50,14 +50,14 @@ export const NewTransactionSheet = () => {
   }));
 
   const isPending =
-    createMutation.isPending ||
+    mutation.isPending ||
     categoryMutation.isPending ||
     accountMutation.isPending;
 
   const isLoading = categoryQuery.isLoading || accountQuery.isLoading;
 
   const onSubmit = (values: FormValues) => {
-    createMutation.mutate(values, {
+    mutation.mutate(values, {
       onSuccess: () => {
         onClose();
       },

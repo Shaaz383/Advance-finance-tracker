@@ -8,8 +8,8 @@ import { convertAmountToMiliunits } from "@/lib/utils";
 
 import { ImportTable } from "./import-table";
 
-const dateFormat = "dd-MM-yyyy HH:mm:ss";
-const outputFormat = "dd-MM-yyyy";
+const dateFormat = "yyyy-MM-dd HH:mm:ss";
+const outputFormat = "yyyy-MM-dd";
 
 const requireOptions = ["amount", "date", "payee"];
 

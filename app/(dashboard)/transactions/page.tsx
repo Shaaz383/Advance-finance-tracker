@@ -5,10 +5,8 @@ import { useState } from "react";
 
 import { useNewTransaction } from "@/features/transactions/hooks/use-new-transaction";
 import { useGetTransactions } from "@/features/transactions/api/use-get-transactions";
-
-
+import { useBulkDeleteTransactions } from "@/features/transactions/api/use-bulk-delete-transactions";
 import { useBulkCreateTransactions } from "@/features/transactions/api/use-bulk-create-transactions";
-import { useBulkDeleteTransactions } from "@/features/transactions/api/use-bulk-delete-transaction";
 
 import { useSelectAccount } from "@/features/accounts/hooks/use-select-account";
 
